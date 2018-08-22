@@ -1,0 +1,48 @@
+@import './variables';
+
+.vendor {
+
+	h3 {
+		margin-bottom: 5px;
+	}
+
+}
+
+.vendor__times {
+
+	> * {
+		display: inline-block;
+	}
+
+	&:before {
+		content: '';
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		background-image: url('images/clock.svg');
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+}
+
+.vendor__location {
+
+	.vendor__details__label {
+		position: absolute;
+		top: -1000px;
+		left: -1000px;
+		height: 0;
+		width: 0;
+	}
+
+	&:before {
+		content: '';
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		background-image: url('images/map-pin.svg');
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+}
+

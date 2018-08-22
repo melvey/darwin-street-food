@@ -1,0 +1,41 @@
+{
+  "name": "foodvans",
+  "version": "1.0.0",
+  "description": "A simple website to show darwin street food open days",
+  "main": "build/index.html",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.5.0",
+    "ejs": "^2.6.1",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
+    "whatwg-fetch": "^2.0.4",
+    "yargs": "^12.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melvey/darwin-street-food.git"
+  },
+  "author": "Matt Elvey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/melvey/darwin-street-food/issues"
+  },
+  "homepage": "https://github.com/melvey/darwin-street-food#readme"
+}

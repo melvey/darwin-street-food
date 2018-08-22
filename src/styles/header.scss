@@ -1,0 +1,13 @@
+@import './variables';
+
+header {
+	background: $highlight;
+	height: 60px;
+	color: $text;
+	padding: 10px;
+	text-align: center;
+
+	h1 {
+		margin: 0;
+	}
+}
