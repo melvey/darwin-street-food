@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A simple website to show darwin street food open days",
   "main": "build/index.html",
+  "scripts": {
+		"build": "gulp"
+  },
   "dependencies": {
   },
   "devDependencies": {
@@ -24,9 +27,6 @@
     "vinyl-source-stream": "^2.0.0",
     "whatwg-fetch": "^2.0.4",
     "yargs": "^12.0.1"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
