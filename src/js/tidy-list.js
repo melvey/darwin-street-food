@@ -7,12 +7,13 @@ const days = {
 	'Thursday': 'Thurs',
 	'Friday': 'Fri',
 	'Saturday': 'Sat'
-}
+};
 
 
 function tidyList(listData) {
 	return listData.filter((record, index) => listData.findIndex((findRecord) => findRecord.Name === record.Name) === index)
 		.map((record) => ({
+			id: record.OBJECTID,
 			name: record.Name,
 			website: record.Website,
 			type: record.Type,

@@ -8,7 +8,6 @@
 function tConvert (time) {
 	// Check correct time format and split into components
 	time = time.toString ().match (/^([01]\d|2[0-3])([0-5]\d)$/) || [time];
-	console.log('match', time);
 
 	if (time.length > 1) { // If time format correct
 		const suffix = time[1] < 12 ? 'AM' : 'PM'; // Set AM/PM

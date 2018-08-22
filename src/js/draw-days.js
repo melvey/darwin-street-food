@@ -57,8 +57,6 @@ function drawDay(day, vendors) {
 	});
 
 	getTarget().innerHTML += content;
-	console.log(content);
-
 }
 
 function drawDays(dayData) {
