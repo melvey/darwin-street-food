@@ -4,7 +4,8 @@
   "description": "A simple website to show darwin street food open days",
   "main": "build/index.html",
   "scripts": {
-		"build": "gulp"
+		"build": "gulp",
+		"deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
   },
