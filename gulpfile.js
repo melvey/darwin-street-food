@@ -17,6 +17,15 @@ gulp.task('js', () => {
 		.pipe(gulp.dest('./build/'));
 });
 
+gulp.task('serviceworker', () => {
+	return browserify({entries: 'src/js/serviceworker.js', debug: !args.prod})
+		.transform('babelify', {presets: ['env']})
+		.bundle()
+		.pipe(source('sw.js'))
+		.pipe(buffer())
+		.pipe(gulp.dest('./build/'));
+});
+
 gulp.task('sass', () => {
 	return gulp.src('src/styles/style.scss')
 		.pipe(plugins.sass())
@@ -44,4 +53,4 @@ gulp.task('watch', (done) => {
 	done();
 });
 
-gulp.task('default', gulp.parallel('views', 'sass', 'js', 'images'));
+gulp.task('default', gulp.parallel('views', 'sass', 'js', 'serviceworker', 'images'));
