@@ -5,8 +5,18 @@ var browserify = require('browserify');
 var babelify = require('babelify');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
+var request = require('request');
 
 var args = yargs.argv;
+
+// The open data hub disabled CORS so we need to cache the dataset here
+var sourceData = 'https://opendata.arcgis.com/datasets/f62cbfbf11494495984097ef8ed6a8a9_0.geojson';
+gulp.task('fetch', () => {
+	return request(sourceData)
+		.pipe(source('data.json'))
+		.pipe(gulp.dest('./build'));
+});
+
 
 gulp.task('js', () => {
 	return browserify({entries: 'src/js/start.js', debug: !args.prod})
@@ -53,4 +63,4 @@ gulp.task('watch', (done) => {
 	done();
 });
 
-gulp.task('default', gulp.parallel('views', 'sass', 'js', 'serviceworker', 'images'));
+gulp.task('default', gulp.parallel('fetch', 'views', 'sass', 'js', 'serviceworker', 'images'));

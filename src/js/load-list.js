@@ -1,5 +1,5 @@
 
-const url = 'https://opendata.arcgis.com/datasets/f62cbfbf11494495984097ef8ed6a8a9_0.geojson';
+const url = 'data.json';
 
 function loadList() {
 	return fetch(url)
