@@ -1,5 +1,5 @@
 const CACHE_TITLE = 'foodvans-cache';
-const CACHE_VERSION = 'v2';
+const CACHE_VERSION = 'v3';
 const CACHE_NAME = `${CACHE_TITLE}-${CACHE_VERSION}`;
 var urlsToCache = [
 	'.',
@@ -7,7 +7,9 @@ var urlsToCache = [
 	'start.js',
 	'images/logo-60x50.png',
 	'images/clock.svg',
-	'images/map-pin.svg'
+	'images/map-pin.svg',
+	'images/chevron-left.svg',
+	'images/chevron-right.svg'
 ];
 
 self.addEventListener('install', (event) => {
