@@ -5,6 +5,7 @@
   "main": "build/index.html",
   "scripts": {
     "build": "gulp",
+    "watch": "gulp watch",
     "deploy": "git subtree push --prefix build origin gh-pages"
   },
   "dependencies": {},

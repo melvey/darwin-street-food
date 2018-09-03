@@ -1,19 +1,85 @@
 @import './variables';
 
-.day__header {
+.day__wrap {
+	margin: auto;
+	overflow-x: hidden;
+}
 
+.day__container {
+	display: flex;
+	flex-wrap: no-wrap;
+	justify-content: center;
+	align-items: flex-start;
+	width: 300%;
+	transform: translateX(-33.3333%);
+}
+
+.day__section {
+	display: block;
+	width: 100%;
+}
+
+.day__header {
 	background: $black;
 	color: $light;
 	padding: 5px;
+	display: flex;
+	justify-content: space-between;
 
 	h2 {
 		margin: 0;
 	}
 }
 
+.day--next {
+	transition: transform 500ms;
+	transform: translateX(-66%);
+}
+
+.day--previous {
+	transition: transform 500ms;
+	transform: translateX(0);
+}
+
+.day__next-btn,
+.day__prev-btn {
+	border: 0;
+	color: white;
+	font-size: 0.7em;
+	background: none;
+	border: 0;
+	display: flex;
+	align-items: center;
+}
+
+.day__next-btn {
+	&::after {
+		content: '';
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		background-image: url('images/chevron-right.svg');
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+}
+
+.day__prev-btn {
+	&::before {
+		content: '';
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		background-image: url('images/chevron-left.svg');
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+}
+
 @media(min-width: 800px) {
-	.day__section {
-		width: 500px;
-		margin: auto;
+	$width: 500px;
+
+	.day__wrap {
+		width: $width;
 	}
 }

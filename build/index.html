@@ -18,12 +18,18 @@
 			<h1>Darwin Street Food</h1>
 		</header>
 		<main>
+			<div class="day__wrap">
+				<div class="day__container">
+				</div>
+			</div>
 		</main>
 		<script src="start.js"></script>
 		<script type="text/pug" id="dayTemplate">
-<section class="day__section">
+<section class="day__section" data-day="<%=dayIndex %>">
 	<div class="day__header">
+		<button class="day__prev-btn">Previous</button>
 		<h2><%= day %></h2>
+		<button class="day__next-btn">Next</button>
 	</div>
 	<% for(var i = 0; i < vendors.length; i++) { %>
 		<article class="vendor">
