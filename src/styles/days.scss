@@ -1,6 +1,6 @@
 @import './variables';
 
-.dayHeader {
+.day__header {
 
 	background: $black;
 	color: $light;
@@ -11,4 +11,9 @@
 	}
 }
 
-
+@media(min-width: 800px) {
+	.day__section {
+		width: 500px;
+		margin: auto;
+	}
+}
