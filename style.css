@@ -213,9 +213,10 @@ sup {
   box-sizing: border-box;
 }
 
-html,body {
+html,body,main {
   margin: 0;
   height: 100%;
+  width: 100%;
 }
 
 header {
@@ -236,13 +237,13 @@ header h1 {
   padding-right: 10px;
 }
 
-.dayHeader {
+.day__header {
   background: black;
   color: white;
   padding: 5px;
 }
 
-.dayHeader h2 {
+.day__header h2 {
   margin: 0;
 }
 
@@ -280,4 +281,11 @@ header h1 {
   background-image: url("images/map-pin.svg");
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+@media (min-width: 800px) {
+  .day__section {
+    width: 500px;
+    margin: auto;
+  }
 }
